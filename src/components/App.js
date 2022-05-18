@@ -48,10 +48,19 @@ function App() {
   const characterFound = dataList.find((item) => item.id === characterId);
   console.log({ characterId, characterFound });
 
+  //reset
+  const handleReset = () => {
+    setFilterStatus('');
+    setNewNameValue('');
+  };
+
   return (
     <div div className="background-color">
-      <h1 className="title--big">Rick and Morty</h1>
-      <p className="subtitle">Character finder</p>
+      <header className="header">
+        <h1 className="title--big">Rick and Morty</h1>
+        <p className="subtitle">Character finder</p>
+      </header>
+
       <main className="main__container">
         <Routes>
           <Route
@@ -63,6 +72,7 @@ function App() {
                   dataFilter={dataFilter}
                   handleInputStatus={handleInputStatus}
                   FilterStatus={FilterStatus}
+                  handleReset={handleReset}
                 />
                 {/*Mi lista de peliculas*/}
                 <CharacterList dataList={dataFilter} />
