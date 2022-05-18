@@ -1,8 +1,10 @@
 const getList = () => {
   return fetch('https://rickandmortyapi.com/api/character')
     .then((response) => response.json())
+
     .then((data) => {
-      const cleanData = data.map((item, index) => {
+      console.log(data);
+      const cleanData = data.results.map((item, index) => {
         return {
           name: item.name,
           status: item.status,

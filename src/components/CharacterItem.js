@@ -3,14 +3,16 @@ import { Link } from 'react-router-dom';
 function CharacterItem(props) {
   return (
     <Link to={`/character/${props.characterList.id}`}>
+      <h2 className="list__li__title">{props.characterList.name} </h2>
+
       <img
         className="list__li__img"
         alt={props.characterList.image}
         title="Póster de la película"
         src={props.characterList.image}
       />
-      <h2 className="list__li__title">{props.characterList.name} </h2>
-      <p className="list__li__year">- {props.characterist.status} -</p>
+
+      <p className="list__li__status">- {props.characterList.status} -</p>
     </Link>
   );
 }

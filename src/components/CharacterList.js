@@ -2,7 +2,7 @@ import CharacterItem from './CharacterItem';
 //lista de películas
 function CharacterList(props) {
   //tranformar datos del array en un li
-  const listElements = props.seriesList.map((characterList) => {
+  const listElements = props.dataList.map((characterList) => {
     return (
       <li className="list__li">
         <CharacterItem characterList={characterList} />

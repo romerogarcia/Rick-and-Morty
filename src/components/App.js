@@ -1,5 +1,6 @@
 import '../styles/CharacterList.scss';
-import '../styles/CharacterDetail.scss';
+//import '../styles/CharacterDetail.scss';
+
 import { Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { matchPath, useLocation } from 'react-router';
@@ -33,7 +34,7 @@ function App() {
   //filtros
   const dataFilter = dataList
     .filter((series) => {
-      return series.series.toLowerCase().includes(newNameValue.toLowerCase());
+      return series.name.toLowerCase().includes(newNameValue.toLowerCase());
     })
     .filter((series) => {
       return FilterStatus === '' ? true : series.status === FilterStatus;
@@ -49,29 +50,32 @@ function App() {
 
   return (
     <div div className="background-color">
-      <h1 className="title--big">Rick and Morty Characters</h1>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Filters
-                handleInputName={handleInputName}
-                dataFilter={dataFilter}
-                handleInputStatus={handleInputStatus}
-                FilterStatus={FilterStatus}
-              />
-              {/*Mi lista de peliculas*/}
-              <CharacterList movieList={dataFilter} />
-            </>
-          }
-        />
-        <Route
-          path="/character/:characterId"
-          element={<CharacterDetail characterId={characterFound} />}
-        />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <h1 className="title--big">Rick and Morty</h1>
+      <p className="subtitle">Character finder</p>
+      <main className="main__container">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Filters
+                  handleInputName={handleInputName}
+                  dataFilter={dataFilter}
+                  handleInputStatus={handleInputStatus}
+                  FilterStatus={FilterStatus}
+                />
+                {/*Mi lista de peliculas*/}
+                <CharacterList dataList={dataFilter} />
+              </>
+            }
+          />
+          <Route
+            path="/character/:characterId"
+            element={<CharacterDetail characterId={characterFound} />}
+          />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
     </div>
   );
 }
