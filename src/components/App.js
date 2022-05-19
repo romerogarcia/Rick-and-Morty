@@ -1,6 +1,5 @@
 import '../styles/CharacterList.scss';
 //import '../styles/CharacterDetail.scss';
-
 import { Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { matchPath, useLocation } from 'react-router';
@@ -9,6 +8,7 @@ import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
 import NotFound from './NotFound';
 import getList from '../services/Api';
+import Header from './Header';
 
 function App() {
   //variables de estado
@@ -56,11 +56,7 @@ function App() {
 
   return (
     <div div className="background-color">
-      <header className="header">
-        <h1 className="title--big">Rick and Morty</h1>
-        <p className="subtitle">Character finder</p>
-      </header>
-
+      <Header />
       <main className="main__container">
         <Routes>
           <Route
@@ -74,6 +70,7 @@ function App() {
                   FilterStatus={FilterStatus}
                   handleReset={handleReset}
                 />
+
                 {/*Mi lista de peliculas*/}
                 <CharacterList dataList={dataFilter} />
               </>
