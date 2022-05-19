@@ -1,5 +1,6 @@
 import FilterName from './FilterName';
 import FilterStatus from './FilterStatus';
+import FilterGender from './FilterGender';
 import ResetFilters from './ResetFilters';
 
 function Filter(props) {
@@ -13,7 +14,12 @@ function Filter(props) {
       <FilterStatus
         dataFilter={props.dataFilter}
         handleInputStatus={props.handleInputStatus}
-        FilterWow={props.FilterStatus}
+        FilterStatus={props.FilterStatus}
+      />
+      <FilterGender
+        dataFilter={props.dataFilter}
+        handleInputGender={props.handleInputGender}
+        FilterGender={props.FilterGender}
       />
       <ResetFilters handleReset={props.handleReset} />
     </div>

@@ -1,6 +1,6 @@
 function CharacterDetail(props) {
   return (
-    <>
+    <div className="containerAllDetails">
       <div className="container_details">
         <section className="detail">
           <img
@@ -14,17 +14,21 @@ function CharacterDetail(props) {
               {props.characterId.name}
             </h2>
 
-            <p className="detail__container_text__phrase">
-              "{props.characterId.species}"
+            <p className="detail__container_text__species">
+              {props.characterId.species}
             </p>
 
-            <p className="detail__container_text__phrase">
-              "{props.characterId.status}"
+            <p className="detail__container_text__gender">
+              {props.characterId.gender}
             </p>
 
-            <p className="detail__container_text__director">
-              Director: {props.characterId.episode}
+            <p className="detail__container_text__origin">
+              Origin: {props.characterId.origin}
             </p>
+
+            <a className="detail__container_text__location">
+              Location: {props.characterId.location}
+            </a>
           </div>
         </section>
       </div>
@@ -63,7 +67,7 @@ function CharacterDetail(props) {
         </div>
         <p className="footer__text">&copy; 2022 🐱 Noelia Romero García</p>
       </footer>
-    </>
+    </div>
   );
 }
 export default CharacterDetail;

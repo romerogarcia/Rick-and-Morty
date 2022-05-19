@@ -6,6 +6,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.containerAllDetails{
+    display: flex;
+  flex-wrap: wrap;
+}
+
 .container_details {
     margin-left: 350px;
     width: 600px;
@@ -15,8 +20,9 @@
 .detail {
     margin-top: 90px;
     margin-bottom: 60px;
-    background-color: rgba(204, 204, 204, 0.932);
-    border-radius: 20px;
+    background: 
+        linear-gradient(rgba(108, 110, 105, 0.795),rgb(177, 245, 100));
+    
     display: flex;
     justify-content: center;
     &__img {
@@ -29,32 +35,52 @@
         padding-top: 100px;
         padding-left: 30px;
         &__title {
-            color: rgb(88, 155, 155);
+            color: rgb(0, 0, 0);
             font-size: 20px;
             text-decoration: none;
             padding-bottom: 10px;
+            font-weight: bold;
+    text-transform: uppercase;
+    background-color: #88DD22;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5px;
+    margin-bottom: 10px;
+
             
         }
-        &__director{
-            color: rgb(114, 114, 114);
+        &__species{
+            color: rgb(75, 75, 75);
+            font-weight: bold;
             font-size: 15px;
             text-decoration: none;
             padding-bottom: 10px;
         }
-        &__phrase {
-            color: rgb(0, 0, 0);
+
+        &__gender {
+            color: rgb(75, 75, 75);
+            font-weight: bold;
             font-size: 15px;
             text-decoration: none;
             padding-bottom: 10px;
-            font-style: italic;
-            font-weight: bold;
         }
-        &__audio{
-            color: rgb(0, 0, 0);
+     
+        &__location{
+            color:rgb(75, 75, 75);
+            font-weight: bold;
             font-size: 15px;
             text-decoration: none;
             font-weight: bold;
-            background-color: rgb(174, 228, 105);
+            
+        }
+
+        &__origin {
+            color: rgb(75, 75, 75);
+            font-weight: bold;
+            font-size: 15px;
+            text-decoration: none;
+            padding-bottom: 10px;
         }
     }
 }

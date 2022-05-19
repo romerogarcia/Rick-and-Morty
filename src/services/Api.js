@@ -11,7 +11,9 @@ const getList = () => {
           species: item.species,
           image: item.image,
           id: index,
-          episode: item.episode,
+          gender: item.gender,
+          origin: item.origin.name,
+          location: item.location.name,
         };
       });
       return cleanData;
