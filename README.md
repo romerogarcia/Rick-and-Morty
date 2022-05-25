@@ -1,10 +1,12 @@
-# Proyecto Owen Wilson's "Wow"
+# Proyecto Rick and Morty
 
 ¡Hola! 🙋🏻‍♀️
 
-Este es mi proyecto para la evaluación final del módulo **REACT** en Adalab.
+Este es mi proyecto realizado de manera independiente para afianzar mis conocimientos de React, Javascript y manejar datos proporcionados por una API.
 
-Aqui podrás encontrar el desarrollo de una aplicación web donde podemos buscar las películas donde el actor Owen Wilson pronuncia un "Wow". Cuando hacemos click en la película seleccionada, podemos ver más detalles sobre esta, y además, tenemos un enlace del audio de la escena "Wow".
+Aqui podrás encontrar el desarrollo de una aplicación web donde podemos buscar los personajes de la serie animada Rick and Morty. Cuando hacemos click en el personaje seleccionado, podemos ver más detalles sobre este.
+
+Podemos encontar nuestro personaje favorito a través de tres filtros, por su nombre, su estaus o su género.
 
 _Lenguajes que he utilizado para la maquetación de esta web:_
 
@@ -31,9 +33,11 @@ Este comando nos abre una ventana en nuestro navegador predeterminado y te muest
 
 Hi! 🙋🏻‍♀️
 
-This is my project for the final evaluation of the **REACT** module at Adalab.
+This is my project done independently to strengthen my knowledge of React, Javascript and handle data provided by an API.
 
-Here you can find the development of a web application where we can search for movies where the actor Owen Wilson pronounces a "Wow". When we click on the selected movie, we can see more details about it, and also, we have a link to the audio of the "Wow" scene.
+Here you can find the development of a web application where we can search for the characters of the animated series Rick and Morty. When we click on the selected character, we can see more details about it.
+
+We can find our favourite character through three filters, by his name, his status or his gender.
 
 _Languages I have used for the layout of this website._
 
